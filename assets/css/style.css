@@ -1,0 +1,53 @@
+html, body{
+	font-size:0.85em;
+	background: #1D464E;
+}
+#chatcontainer{
+	margin-bottom:50px;
+}
+.footer{
+	position:fixed;
+	padding: 5px 20px;
+	bottom:0px;
+	left:0px;
+}
+.main {
+	padding: 5px 20px;
+}
+#btnchat {
+	background: #3FA318;
+	color: #fff;
+	border: 1px solid #48A853;
+}
+#btnchat:hover {
+	background: #469427;
+	border: 1px solid #3A8F43;
+}
+.loginpan, #msg{
+	margin-top:5%;
+	margin-right:5%;
+	margin-left:5%;
+}
+.loginpan input{
+	margin-top:5px;
+	margin-bottom:5px;
+}
+#msg{
+	margin-top:0;
+	font-size:1em;
+}
+.chat{
+	padding:5px;
+	margin-bottom:1px;
+}
+.welcome{
+	width:100%;
+	min-height:750px;
+	background:#0b3b41;
+	text-align:center;
+	z-index:100;
+	position:absolute;
+	top:0;
+	left:0;
+	color:#fff;
+}

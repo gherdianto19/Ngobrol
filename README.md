@@ -1,0 +1,2 @@
+# gchat
+### a Sails application
