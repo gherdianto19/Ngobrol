@@ -20,6 +20,16 @@
     log('Socket connected');
     // Listen for Comet messages from Sails
 
+	socket.get('/main/chatinit',null, function (response) {
+		log(response);
+		if(response.success==true){
+			appendinit('<strong>gerry :</strong> Welcome to ngobrol..');
+			for(i=0;i<response.data.length;i++){
+				appendchat('<strong>'+response.data[i].username+' :</strong> '+response.data[i].chat_text);
+			}
+		}
+	});
+
 	socket.on('message', function messageReceived(response) {
 
 	///////////////////////////////////////////////////////////
@@ -99,6 +109,10 @@
 
 	function appendchat(msgs){
 		$("#chatcontainer").append('<div class="alert alert-info chat">'+msgs+'</div>');
+	}
+
+	function appendinit(msgs){
+		$("#chatcontainer").append('<div class="alert alert-success chat">'+msgs+'</div>');
 	}
 
 	function alertbox(msgs){

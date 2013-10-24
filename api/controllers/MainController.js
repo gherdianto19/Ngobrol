@@ -138,6 +138,48 @@ module.exports = {
 		});
 		return console.log('autentifikasi chat gagal');
 	}
-  }  
+  },
+
+  chatinit: function (req, res) {
+	if(req.session.usr){
+		var today = new Date();
+		var ss = today.getMilliseconds()
+		var nn = today.getMinutes();
+		var hh = today.getHours();
+		var dd = today.getDate();
+		var mm = today.getMonth()+1;
+		var yyyy = today.getFullYear();
+
+		if(dd<10){dd='0'+dd} 
+		if(mm<10){mm='0'+mm} 
+		if(hh<10){hh='0'+hh} 
+		if(nn<10){nn='0'+nn} 
+		if(ss<10){ss='00'+ss} if(ss<100){ss='0'+ss} 
+
+		today = yyyy+'-'+mm+'-'+dd+' '+hh+':'+nn+':'+ss;
+		
+		Chat.find({
+			where: {
+				createdAt: {
+					'<': today
+				}
+			},
+			limit: 10,
+			sort: 'createdAt ASC'
+		}, function(err, cl) {
+			res.json({
+				success: true,
+				data : cl
+			});			
+		});
+	}else{
+		res.json({
+			success: false,
+			error : 'autentifikasi gagal',
+			code : 400
+		});
+		return console.log('autentifikasi chat gagal');
+	}
+  }   
 
 };
