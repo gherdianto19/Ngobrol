@@ -182,4 +182,12 @@ module.exports = {
 	}
   }   
 
+  logout: function (req, res) {
+	req.session.usr = false;
+	res.json({
+		success: true,
+		message : 'Logout',
+	});
+  }
+
 };

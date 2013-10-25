@@ -38,7 +38,7 @@
 	// server.
 	///////////////////////////////////////////////////////////
 		appendchat('<strong>'+response.data.username+' :</strong> '+response.data.message);
-		$('#btnchat').focus();
+		$('#formchat input[name=chat_text]').focus();
 		log(response);
 	//////////////////////////////////////////////////////
 
