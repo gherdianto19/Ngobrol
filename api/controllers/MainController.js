@@ -180,7 +180,7 @@ module.exports = {
 		});
 		return console.log('autentifikasi chat gagal');
 	}
-  }   
+  },   
 
   logout: function (req, res) {
 	req.session.usr = false;
