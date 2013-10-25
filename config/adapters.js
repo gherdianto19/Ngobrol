@@ -16,7 +16,7 @@ module.exports.adapters = {
 
   // If you leave the adapter config unspecified 
   // in a model definition, 'default' will be used.
-  'default': 'pg',
+  'default': 'postgresql',
 
   // In-memory adapter for DEVELOPMENT ONLY
   memory: {
@@ -42,13 +42,14 @@ module.exports.adapters = {
     database: 'gchat'
   },
 
-  pg: {
+  postgresql: {
 
     module: 'sails-postgresql',
     host: 'ec2-54-204-20-28.compute-1.amazonaws.com',
     user: 'iwjbgqqfejffxz',
     password: 'fZoSvl8Z19D0-g3DuyK-h_J05O',
     port: 5432,
+    database: 'dfptqf83loisgd',
     pool: false
   }
 };
