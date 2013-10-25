@@ -40,7 +40,7 @@ module.exports.adapters = {
     // so you don't inadvertently push it up if you're using version control
     password: '', 
     database: 'gchat'
-  }
+  },
 
   pg: {
 
