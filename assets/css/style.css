@@ -5,6 +5,12 @@ html, body{
 #chatcontainer{
 	margin-bottom:50px;
 }
+.header{
+	position:fixed;
+	padding: 5px 20px;
+	top:0px;
+	left:0px;
+}
 .footer{
 	position:fixed;
 	padding: 5px 20px;
