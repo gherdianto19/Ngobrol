@@ -11,7 +11,7 @@
 (function (io) {
 
   // as soon as this file is loaded, connect automatically, 
-  var socket = io.connect('http://gherdianto.herokuapp.com:80');
+  var socket = io.connect('http://gherdianto.herokuapp.com:80/');
   if (typeof console !== 'undefined') {
     log('Connecting to Sails.js...');
   }
@@ -102,8 +102,16 @@
 			$("#msg").empty();
 			$("#msg").css('margin-top', '0px');
 		});
-		$('.welcome').click(function(){
+		$('#go').click(function(){
 			$(".welcome").remove();
+		});
+		$('#logout').click(function(){
+			socket.get('/main/logout',{},function (response) {
+				log(response);
+				if(response.success==true){
+					document.location.href = '/';
+				}
+			});			
 		});
 	});
 

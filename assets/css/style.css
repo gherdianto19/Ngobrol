@@ -6,10 +6,11 @@ html, body{
 	margin-bottom:50px;
 }
 .header{
-	position:fixed;
 	padding: 5px 20px;
 	top:0px;
 	left:0px;
+	background: #225FA2;
+	text-align:center;
 }
 .footer{
 	position:fixed;
