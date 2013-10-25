@@ -11,7 +11,7 @@
 (function (io) {
 
   // as soon as this file is loaded, connect automatically, 
-  var socket = io.connect('http://192.168.1.5:1337');
+  var socket = io.connect('http://gherdianto.herokuapp.com:80');
   if (typeof console !== 'undefined') {
     log('Connecting to Sails.js...');
   }
